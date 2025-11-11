@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* AMT Brand Colors */
+  --amt-red: #E82A2A;
+  --amt-black: #010101;
+  --amt-white: #F8F9FA;
+  --amt-cream: #F2EEEB;
+  --amt-beige: #BFAB9F;
+  --amt-gray: #E5E5E5;
+  
+  /* AMT Typography */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Legacy variables for compatibility */
+  --primary: #E82A2A;
+  --dark: #010101;
+  --light: #F2EEEB;
+  --bold: 'Montserrat', sans-serif;
+}
+
+* {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+#former label{
+	display: block;
+	padding-bottom: 3px;
+}
+#former td{width:50%; padding: 10px;}
+#former input:not([type="radio"]){width: 100%; height: 25px;}
+#former .yesno{
+	display: flex;
+}
+.bottomHalf .container.innerse .instructions h2 {
+  background: var(--dark);
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+}
+.instructions h4.lineouut {
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    border-bottom: 2px solid var(--primary);
+}
+
+h2.titleUp {
+  padding-bottom: 80px;
+    padding-top: 100px;
+    text-align: center;
+}
+.instructions h4.lineouut:first-of-type {
+    padding-top: 0;
+}
+table#signature {
+    cursor: none;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+#former .yesno > div:first-child{
+	padding-right:10px;
+}
+#former .yesno > div{
+	padding-top: 5px;
+	width: fit-content;
+	display: inline-flex;
+}
+#former #meetings{display: none;}
+#former .mt td{
+	padding-top: 5px;
+}
+/* 
+.bottomHalf {
+  display:none;
+} */
+
+textarea{display:none;}
+.inliner{
+	max-width: 25%;
+	display: inline-block;
+}
+#areacode{
+	max-width: 16%;
+}
+#cpnum2, #cpnum{
+	max-width: 18%;
+}
+
+div#former {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+div#former table.formtable {
+    border: none;
+    background: #f1f3f1;
+    padding: 70px;
+      width: 100%;
+}
+
+div#former .formtable th, div#former .formtable td {
+    background-color: transparent;
+    border: none;
+    color: rgba(0, 0, 0, 1.0);
+}
+
+.is-hidden {
+  display: none;
+}
+
+input:invalid {
+/*     border-color: red; */
+}
+
+/* #former .field.has-addons.has-addons-centered.cellphoneitem input:not([type=radio]) {
+    width: 72px !important;
+    text-align: center;
+    height: auto!important;
+}
+
+#former .field.has-addons.has-addons-centered.cellphoneitem p.control {
+    width: fit-content;
+    float: left;
+} */
+
+.innerse.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    width: calc(90% + 30px);
+}
+
+.innerse.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.innerse.container {
+    max-width: 1200px;
+}
+
+.signatureForm {
+  background: linear-gradient(0deg, var(--amt-cream) 60%, var(--amt-white) 0);
+  height: 100%;
+  padding-bottom: 100px;
+}
+
+.bottomHalf {
+ background: linear-gradient(0deg, var(--amt-cream) 60%, var(--amt-white) 0);
+}
+
+td, th {
+    padding: unset;
+    vertical-align: unset;
+}
+
+th, td {
+    background-color: unset;
+    border: unset;
+    color: unset;
+}
+
+.bottomHalf .container.innerse {
+    padding: 20px 50px;
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(242, 238, 235, 0.8);
+    border-radius: 22px;
+    -webkit-box-shadow: 0 10px 32px 0 rgba(0, 0, 0, .11);
+    -moz-box-shadow: 0 10px 32px 0 rgba(0, 0, 0, .11);
+    box-shadow: 0 10px 32px 0 rgba(0, 0, 0, .11);
+}
+
+table#copier {
+    background: #f1f3f1;
+    padding: 40px;
+    box-shadow: 0 0px 20px 7px rgba(0, 0, 0, 0.05);
+  padding-top: 40px ! Important;
+    padding-bottom: 40px ! Important;
+}
+
+#former input:not([type=radio]) {
+    height: 25px;
+    width: 100%;
+    background-color: #f5f8fa;
+    border: 1px solid #cbd6e2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #33475b;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 22px;
+    max-width: 100%;
+    min-height: 27px;
+    padding: 0 15px;
+    width: 100%;
+    border-color: rgba(203, 214, 226, 1.0);
+    background-color: rgba(245, 248, 250, 1.0);
+    color: rgba(51, 71, 91, 1.0);
+    border-radius: 3px;
+}
+
+button#sbmtForm {
+    border-radius: 500rem;
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--bold);
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    line-height: 1.5;
+    padding: .375rem 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    color: #fff;
+    margin-top: 40px;
+}
+
+a#dl {
+    border: none;
+    background-color: rgba(106, 185, 207, 1.0);
+    border-color: rgba(106, 185, 207, 1.0);
+    border-radius: 3px;
+    border-width: 1px;
+    color: rgba(255, 255, 255, 1.0);
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#copyButton {
+  display: none;
+}
+
+div#hidden {
+    display: none;
+}
+
+table {
+    margin-bottom: 0;
+}
+
+span.range {
+  color: var(--primary);
+}
+
+td.socialicon img {
+    width: 13px;
+    object-fit: contain;
+}
+
+.formPlus {
+  backdrop-filter: saturate(180%) blur(20px);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 22px;
+  -webkit-box-shadow: 0 10px 32px 0 rgba(0, 0, 0, .11);
+  -moz-box-shadow: 0 10px 32px 0 rgba(0, 0, 0, .11);
+  box-shadow: 0 10px 32px 0 rgba(0, 0, 0, .11);
+  padding: 70px;
+  width: 100%;
+}
+
+td#partner_logos img {
+    width: 85px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.signatureForm div#former form#form {
+  display: grid;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  justify-items: stretch;
+}
+
+.signatureForm #former label {
+    display: flex;
+    padding-bottom: 0;
+    background: transparent;
+    border: none;
+}
+
+.container.innerse>.column {
+    background: rgba(242, 238, 235, 0.5);
+    border: 1px solid var(--amt-beige);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+div#signature_container {
+    border: 1px solid #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    background: #fff;
+    padding: 1.5em;
+}
+
+@media (max-width: 767px) {
+  .bottomHalf .container.innerse {
+      padding: 20px 20px;
+  }
+  #former td {
+    padding: 10px;
+    width: 100%;
+    display: block;
+  }
+  div#former table.formtable {
+    background: #f1f3f1;
+    border: none;
+    padding: 20px;
+    width: 100%;
+  }
+  table#copier {
+    display: block;
+    width: 100%!important;
+    transform: scale(0.8);
+    margin-left: -50px;
+    padding-right: 50px !important;
+    background: none;
+    box-shadow: none;
+  }
+  div#former {
+    width: 100%;
+  }
+  .signatureForm div#former form#form {
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+    justify-items: stretch;
+  }
+}
+
+.sidenote {
+  background: rgba(242, 238, 235, 0.5);
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid var(--amt-beige);
+  border-radius: 15px;
+}
+
+.bottomHalf .container.innerse h2 {
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 20px;
+  padding-top: 30px;
+    color: var(--dark);
+}
+
+.titleNote {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.is-hidden {
+  display: none!important;
+}
+
+.container.innerse > div {
+    color: #000;
+}
+
+button#resetButton {
+    border: 1px solid transparent;
+    border-radius: 500rem;
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--bold);
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    line-height: 1.5;
+    padding: .375rem 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    background: #fff;
+    border: 1px solid var(--primary);
+    color: var(--dark);
+    display: block;
+    margin-top: 40px;
+}

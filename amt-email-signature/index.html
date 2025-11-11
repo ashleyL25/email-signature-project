@@ -1,0 +1,521 @@
+<link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<div class="signatureForm">
+    <div class="container innerse" id="former">
+      <h2 class="titleUp">
+        AMT Email Signature Generator
+      </h2>
+      <div class="formPlus">
+        <form id="form">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label" for="fname">First Name</label>
+            </div>
+            <div class="field-body">
+              <div class="field has-addons has-addons-centered">
+                <p class="control is-expanded">
+                  <input id="fname" class="input name" placeholder="First Name">
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label" for="lname">Last Name</label>
+            </div>
+            <div class="field-body">
+              <div class="field has-addons has-addons-centered">
+                <p class="control is-expanded">
+                  <input id="lname" class="input name" placeholder="Last Name">
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label" for="position">Position</label>
+            </div>
+            <div class="field-body">
+              <div class="field has-addons has-addons-centered">
+                <p class="control is-expanded">
+                  <input id="position" class="input" placeholder="Job Title">
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="field is-horizontal cellphone">
+            <div class="field-label is-normal">
+              <label class="label" for="phone">Phone Number (Optional)</label>
+            </div>
+            <div class="field-body cellphonecover">
+              <div class="field has-addons has-addons-centered cellphoneitem">
+                <p class="control is-expanded">
+                  <input id="phone" class="input" type="text" placeholder="515-331-2602">
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label" for="email">Email</label>
+            </div>
+            <div class="field-body">
+              <div class="field has-addons has-addons-centered">
+                <p class="control is-expanded">
+                  <input id="email" class="input" type="email" placeholder="name@amtiowa.com">
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Include ISO 9001 Badge?</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <label class="radio">
+                    <input type="radio" name="iso_badge" value="1" checked>
+                    Yes
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="iso_badge" value="0">
+                    No
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <button class="btn btn-orange" id="sbmtForm">Generate Signature</button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="hidden" class="bottomHalf" style="display: none;">
+    <h2 class="titleUp">
+      AMT Email Signature
+    </h2>
+    <div class="container innerse">
+      <div class="column">
+        <article class="message is-primary">
+          <div class="message-body" id="signature_container">
+            <!-- AMT Signature Structure -->
+            <table width="700" cellpadding="0" cellspacing="0" style="font-family: 'Inter', Arial, sans-serif; border-collapse: collapse;">
+              <tbody>
+                <!-- Top Section - White Background with Logo -->
+                <tr>
+                  <td style="padding: 15px 0 0 0; background-color: #ffffff;">
+                    <img src="img/Logo_Horizontal.png" 
+                         alt="AMT Logo" 
+                         width="700" 
+                         style="max-width: 700px; display: block; width: 100%;">
+                  </td>
+                </tr>
+                
+                <!-- Bottom Section - Black Background -->
+                <tr>
+                  <td style="background-color: #000000; padding: 25px 30px;">
+                    <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                      <tr>
+                        <!-- Left Side - Name and Title -->
+                        <td style="vertical-align: middle; padding-right: 30px; width: 55%;">
+                          <h2 class="name" style="margin: 0; padding: 0; color: #ffffff; font-size: 42px; font-weight: 700; line-height: 1.1; font-family: 'Montserrat', Arial, sans-serif;">
+                            First Last Name
+                          </h2>
+                          <p class="position" style="margin: 8px 0 0 0; padding: 0; color: #ffffff; font-size: 22px; font-weight: 400; line-height: 1.3; font-family: 'Inter', Arial, sans-serif;">
+                            Job Title
+                          </p>
+                        </td>
+                        
+                        <!-- Right Side - Contact Info and ISO Badge -->
+                        <td style="vertical-align: middle; text-align: left; width: 45%;">
+                          <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                            <tr>
+                              <td style="vertical-align: middle; padding-right: 15px;">
+                                <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                                  <tr>
+                                    <td style="padding-bottom: 6px;">
+                                      <p style="margin: 0; padding: 0; color: #ffffff; font-size: 14px; font-weight: 700; font-family: 'Montserrat', Arial, sans-serif;">
+                                        Address:
+                                      </p>
+                                      <p style="margin: 0; padding: 0; color: #ffffff; font-size: 13px; font-weight: 400; line-height: 1.4; font-family: 'Inter', Arial, sans-serif;">
+                                        5750 NW Beaver Drive<br>
+                                        Johnston, IA 50131
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style="padding-bottom: 6px;">
+                                      <p style="margin: 0; padding: 0; color: #ffffff; font-size: 14px; font-weight: 700; font-family: 'Montserrat', Arial, sans-serif;">
+                                        Phone Number:
+                                      </p>
+                                      <p class="phone" style="margin: 0; padding: 0; color: #ffffff; font-size: 13px; font-weight: 400; font-family: 'Inter', Arial, sans-serif;">
+                                        <a href="tel:515-331-2602" style="color: #ffffff; text-decoration: none;">515-331-2602</a>
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p style="margin: 0; padding: 0; color: #ffffff; font-size: 14px; font-weight: 700; font-family: 'Montserrat', Arial, sans-serif;">
+                                        Website:
+                                      </p>
+                                      <p style="margin: 0; padding: 0; color: #ffffff; font-size: 13px; font-weight: 400; font-family: 'Inter', Arial, sans-serif;">
+                                        <a href="https://www.amtiowa.com" style="color: #ffffff; text-decoration: none;">www.amtiowa.com</a>
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td class="iso_badge_container" style="vertical-align: middle; width: 90px;">
+                                <img src="img/ISO-9001-certified-stamp.png" 
+                                     alt="ISO 9001 Certified" 
+                                     width="90" 
+                                     style="max-width: 90px; display: block;">
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+  
+        <div class="controls">
+          <button class="button is-info" id="prepareButton" data-prepare data-signature="signature">
+            Prepare HTML (for Outlook)
+          </button>
+          <a class="button is-primary is-hidden" id="downloadButton" data-load download="amt_signature.html">
+            Download HTML File
+          </a>
+          <button class="button is-warning" id="resetButton">
+            Reset Generator
+          </button>
+        </div>
+      </div>
+  
+      <div class="instructions" style="padding: 2rem 0;">
+        <h3>Final Steps:</h2>
+        <div class="sidenote">
+          <p class="titleNote">IMPORTANT:</p>
+          <p><em>Outlook doesn’t sync signatures between the desktop app and browser, so you need to set them up separately to ensure your signature shows up consistently across both platforms.</em></p>
+        </div>
+  
+        <h2>For Desktop Outlook:</h3>
+        <h4 class="lineouut">On Mac:</h4>
+        1. Open the HTML file in a browser (right-click and select "Open With" > choose a browser).  
+        <br><br>
+        2. Select the entire signature using <strong>Cmd + A</strong> (Mac).  
+        <br><br>
+        3. Open Desktop Outlook and go to <strong>Outlook > Settings > Edit</strong> or click <strong>[+]</strong> to create a new template, then click <strong>Edit</strong>.  
+        <br><br>
+        4. Create a new signature or select an existing one, then paste the copied signature into the editor box with <strong>Cmd + V</strong> (Mac).  
+        <br><br>
+        5. Assign the signature to your email accounts as needed, then close the window to save.  
+  
+        <br><br>
+        <h4 class="lineouut">On Windows:</h4>
+        1. Open the HTML file in a browser (right-click and select "Open With" > choose a browser).  
+        <br><br>
+        2. Select the entire signature using <strong>Ctrl + A</strong> (Windows).  
+        <br><br>
+        3. Open Desktop Outlook and go to <strong>File > Options > Mail > Signatures</strong>.  
+        <br><br>
+        4. Create a new signature or select an existing one, then paste the copied signature into the editor box with <strong>Ctrl + V</strong> (Windows).  
+        <br><br>
+        5. Assign the signature to your email accounts as needed, then click <strong>OK</strong> to save.  
+        <br><br>
+  
+        <h2>For Web Outlook:</h3>
+        1. Click the button above to download your signature as an .html file.  
+        <br><br>
+        2. Open the HTML file in a browser (right-click and select "Open With" > choose a browser).  
+        <br><br>
+        3. Select the entire signature using <strong>Ctrl + A</strong> (Windows) or <strong>Cmd + A</strong> (Mac).  
+        <br><br>
+        4. Go to your Web Outlook (<a href="https://outlook.office.com">https://outlook.office.com</a>) and log in.  
+        <br><br>
+        5. In the top right, click the gear icon (⚙️), then click <strong>View all Outlook settings</strong> at the bottom.  
+        <br><br>
+        6. Go to <strong>Account > Signatures</strong>, then paste the copied signature into the signature box with <strong>Ctrl + V</strong> (Windows) or <strong>Cmd + V</strong> (Mac).  
+        <br><br>
+        7. Save your changes.  
+        <br><br>
+  
+        <div class="sidenote">
+          <p class="titleNote">NOTE:</p>
+          <p><em>If you're using Desktop Outlook, follow the steps carefully based on your operating system to avoid issues with images, links, or spacing.</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <style>
+    .button.is-primary {
+      background-color: var(--dark);
+      border-color: transparent;
+      color: #fff;
+      border: 1px solid transparent;
+      border-radius: 500rem;
+      cursor: pointer;
+      display: inline-block;
+      font-family: var(--bold);
+      font-size: 1.125rem;
+      font-weight: 600;
+      letter-spacing: .1rem;
+      line-height: 1.5;
+      padding: .375rem 1.5rem;
+      text-align: center;
+      text-transform: uppercase;
+      /* background: var(--primary); */
+      border: 1px solid var(--dark);
+      color: #fff;
+      /* display: block; */
+      margin-top: 40px;
+      transition: all .3s ease;
+    }
+    .copy-success {
+      display: none;
+    }
+    .field-label {
+      text-align: left;
+      white-space: nowrap;
+    }
+    .signatureForm div#former form#form {
+      max-width: none;
+      width: 100%;
+    }
+    #former input:not([type=radio]) {
+      background-color: #fff;
+      border: 1px solid #cbd6e2;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px;
+      box-sizing: border-box;
+      color: #33475b;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 400;
+      height: 25px;
+      height: 40px;
+      line-height: 22px;
+      max-width: 100%;
+      min-height: 27px;
+      padding: 0 15px;
+      width: 100%;
+      box-shadow: none;
+    }
+    .signatureForm #former label {
+      background: transparent;
+      border: none;
+      display: flex;
+      padding-bottom: 0;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 10px 0;
+      color: var(--dark);
+      font-weight: bold;
+      filter: contrast(1.2);
+      column-gap: 11px;
+    }
+    .field.is-horizontal {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    button#sbmtForm {
+      margin-top: 50px;
+      transition: all .3s ease;
+    }
+    .button.is-info {
+      border-radius: 500rem;
+      cursor: pointer;
+      display: inline-block;
+      font-family: var(--bold);
+      font-size: 1.125rem;
+      font-weight: 600;
+      letter-spacing: .1rem;
+      line-height: 1.5;
+      padding: .375rem 1.5rem;
+      text-align: center;
+      text-transform: uppercase;
+      background: var(--primary);
+      border: 1px solid var(--primary);
+      color: #fff;
+      margin-top: 40px;
+      transition: all .3s ease;
+    }
+    .button.is-info:hover {
+      background: transparent;
+      color: #014261;
+    }
+    button#sbmtForm:hover {
+      background: transparent;
+      color: #014261;
+    }
+    .button.is-primary:hover {
+      background: transparent;
+      color: #014261;
+    }
+    @media screen and (min-width: 769px), print {
+      .field-label {
+        text-align: left;
+        white-space: nowrap;
+      }
+      .field.is-horizontal {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+  
+  <script>
+    $(document).ready(function() {
+      function formatPhoneNumber(input) {
+        // Remove all non-digit characters
+        var cleaned = input.replace(/\D/g, '');
+        var formattedPhone = '';
+  
+        // Only format if we have digits
+        if (cleaned.length > 0) {
+          // Handle area code
+          formattedPhone += '' + cleaned.substring(0, Math.min(3, cleaned.length)) + '';
+        }
+        if (cleaned.length > 3) {
+          // Handle first three digits after area code
+          formattedPhone += '-' + cleaned.substring(3, Math.min(6, cleaned.length));
+        }
+        if (cleaned.length > 6) {
+          // Handle remaining digits
+          formattedPhone += '-' + cleaned.substring(6, Math.min(10, cleaned.length));
+        }
+  
+        return formattedPhone;
+      }
+  
+      function handleInput() {
+        var currentValue = $(this).val();
+        var digitsOnly = currentValue.replace(/\D/g, '');
+  
+        // Only keep up to 10 digits
+        digitsOnly = digitsOnly.substring(0, 10);
+  
+        // Format and set the value
+        var formatted = formatPhoneNumber(digitsOnly);
+        $(this).val(formatted);
+        $(this).attr('data-phone', digitsOnly);
+      }
+  
+      $('#phone').on('input', handleInput);
+      $('#phone').on('blur', function() {
+        var digitsOnly = $(this).val().replace(/\D/g, '');
+      });
+    });
+  
+    $(document).ready(function() {
+      $('#resetButton').on('click', function() {
+        // Reset all form inputs
+        $('#form')[0].reset();
+  
+        // Hide the signature view and show the form
+        $('#hidden').hide();
+        $('.signatureForm').show();
+  
+        $('#downloadButton')
+          .addClass('is-hidden')
+          .text('Download HTML File'); // Reset the download button text
+        $('#prepareButton').removeClass('is-hidden');
+  
+        // Reset signature text back to defaults
+        $('.name').text('First Last Name');
+        $('.position').text('Job Title');
+        $('.phone a').attr('href', 'tel:515-331-2602').text('515-331-2602');
+        
+        // Reset ISO badge (show it)
+        $('.iso_badge_container').show();
+      });
+    });
+  
+  
+    $(document).ready(function() {
+      // Form submission
+      $('#sbmtForm').click(function() {
+        $('.signatureForm').hide();
+        $('#hidden').slideDown();
+        updateSignature();
+      });
+  
+      // HTML preparation and download
+      const prepare = document.querySelector('#prepareButton');
+      const download = document.querySelector('#downloadButton');
+  
+      prepare.addEventListener('click', prepareHTML);
+  
+      function prepareHTML() {
+        const html = document.querySelector('#signature_container').innerHTML;
+        const blob = new Blob([html], { type: 'text/html' });
+        download.href = window.URL.createObjectURL(blob);
+        download.classList.remove('is-hidden');
+        prepare.classList.add('is-hidden');
+      }
+      // Improved download button handling
+      $('#downloadButton').click(function() {
+        const button = $(this);
+        button.text('✓ Downloaded!');
+  
+        // When user returns from file save dialog (window regains focus)
+        $(window).one('focus', function() {
+          // Wait a moment for visual feedback
+          setTimeout(function() {
+            button.text('Download Again');
+          }, 2000);
+        });
+      });
+    });
+  
+    function updateSignature() {
+      // Update name
+      const firstName = $('#fname').val();
+      const lastName = $('#lname').val();
+      $('.name').text(firstName + ' ' + lastName);
+  
+      // Update position
+      $('.position').text($('#position').val());
+  
+      // Update phone
+      const phoneInput = $('#phone').val();
+      if (phoneInput && phoneInput.trim() !== '') {
+        const cleanPhone = phoneInput.replace(/\D/g, '');
+        // Format phone as XXX-XXX-XXXX
+        const formattedPhone = `${cleanPhone.substring(0, 3)}-${cleanPhone.substring(3, 6)}-${cleanPhone.substring(6, 10)}`;
+        $('.phone').html(`<a href="tel:${formattedPhone}" style="color: #ffffff; text-decoration: none;">${phoneInput}</a>`);
+      } else {
+        // Use default phone from Canva design
+        $('.phone').html('<a href="tel:515-331-2602" style="color: #ffffff; text-decoration: none;">515-331-2602</a>');
+      }
+  
+      // Handle ISO badge visibility
+      const showIsoBadge = $('input[name="iso_badge"]:checked').val() === '1';
+      if (showIsoBadge) {
+        $('.iso_badge_container').show();
+      } else {
+        $('.iso_badge_container').hide();
+      }
+    }
+  </script>
