@@ -24,6 +24,23 @@
   font-family: var(--font-body);
 }
 
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--dark);
+}
+a:visited {
+  color: var(--primary);
+}
+a:active {
+  color: var(--dark);
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
